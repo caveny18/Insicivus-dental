@@ -1,0 +1,278 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* HERO / ENCABEZADO */
+.hero {
+  background: url('consultorio.jpg') center/cover no-repeat;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 80, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: transparent;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: 2px solid white;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-color: #fff;
+}
+
+.icon i {
+  font-size: 1.2rem;
+}
+
+/* TRATAMIENTOS */
+.treatments {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.treatments h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #002244;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #e6f0ff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 50, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+}
+
+/* EQUIPO */
+.team {
+  padding: 4rem 2rem;
+  background-color: #f0f4f8;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #002244;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.member {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 50, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 4px solid #ddd;
+}
+
+.member h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #002244;
+}
+
+.member p {
+  font-size: 0.95rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: #001122;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* BOTÓN FLOTANTE WHATSAPP */
+.floating-whatsapp, .floating-reserva {
+  position: fixed;
+  bottom: 20px;
+  z-index: 100;
+  padding: 0.8rem 1.2rem;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s;
+}
+
+.floating-whatsapp {
+  right: 20px;
+}
+
+.floating-reserva {
+  right: 140px;
+  background-color: #007bff;
+}
+
+.floating-whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+.floating-reserva:hover {
+  background-color: #0062cc;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .icon {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .floating-reserva {
+    right: 90px;
+  }
+}
+/* Botones flotantes de redes */
+.floating-icon {
+  position: fixed;
+  right: 20px;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+.floating-icon.whatsapp {
+  bottom: 20px;
+  background-color: #25D366;
+}
+
+.floating-icon.instagram {
+  bottom: 80px;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.floating-icon.facebook {
+  bottom: 140px;
+  background-color: #3b5998;
+}
+
+/* Botón grande "Reservar Cita" */
+.floating-button {
+  position: fixed;
+  bottom: 200px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border-radius: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+.floating-button:hover {
+  background-color: #0056b3;
+}
